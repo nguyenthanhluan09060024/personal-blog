@@ -1,0 +1,151 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container-wide">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-circle">
+                    <span class="avatar-text">NTL</span>
+                </div>
+            </div>
+            <h1 class="hero-title">Xin chào! Tôi là Nguyễn Thành Luân</h1>
+            <p class="hero-subtitle">Developer với 3 năm kinh nghiệm về lập trình mạng</p>
+            <p class="hero-description">
+                Chào mừng bạn đến với blog cá nhân của tôi! Tôi là Nguyễn Thành Luân, một developer đam mê 
+                lập trình mạng và web development với <strong>3 năm kinh nghiệm</strong> trong việc phát triển 
+                các ứng dụng web và hệ thống mạng. Hiện đang học tại <strong>Đại học Công nghệ TP.HCM</strong>.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Năm kinh nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">9+</div>
+                    <div class="stat-label">Bài viết chuyên sâu</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Đam mê công nghệ</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="{{ "/blog/" | relURL }}" class="btn btn-primary">
+                    <span class="btn-icon">📚</span>
+                    Đọc Blog
+                </a>
+                <a href="{{ "/about/" | relURL }}" class="btn btn-primary">
+                    <span class="btn-icon">👨‍💻</span>
+                    Giới thiệu
+                </a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+            <div class="bg-shape bg-shape-3"></div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-posts">
+    <div class="container-wide">
+        <div class="section-header">
+            <h2>Bài viết nổi bật</h2>
+            <p>Những bài viết mới nhất về lập trình mạng với Java & JavaScript</p>
+        </div>
+        <div class="posts-grid">
+            {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+            <article class="post-card">
+                <div class="post-card-header">
+                    <div class="post-card-category">
+                        {{ if .Params.tags }}
+                            {{ range first 1 .Params.tags }}
+                            <span class="category-tag">{{ . }}</span>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p class="post-card-excerpt">{{ .Summary | truncate 120 }}</p>
+                    <div class="post-card-footer">
+                        <div class="post-card-tags">
+                            {{ if .Params.tags }}
+                                {{ range .Params.tags }}
+                                <span class="tag">{{ . }}</span>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                        <div class="post-card-meta">
+                            <span class="reading-time">{{ .ReadingTime }} phút đọc</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="about-preview">
+    <div class="container-wide">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Về tôi - Nguyễn Thành Luân</h2>
+                <p>
+                    Tôi là một developer đam mê lập trình mạng và web development với <strong>3 năm kinh nghiệm</strong>. 
+                    Hiện đang học tại <strong>Đại học Công nghệ TP.HCM</strong>. 
+                    Blog này là nơi tôi chia sẻ những kiến thức, kinh nghiệm và insights 
+                    về Java, JavaScript và các công nghệ lập trình mạng khác.
+                </p>
+                <div class="skills-preview">
+                    <div class="skill-item">
+                        <span class="skill-icon">☕</span>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">⚡</span>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-name">WebSocket</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">📡</span>
+                        <span class="skill-name">Networking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Thông tin liên hệ</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-text">nguyenthanhluan0906200@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span class="contact-text">0961107594</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🎂</span>
+                    <span class="contact-text">09/06/2004</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🏫</span>
+                    <span class="contact-text">Đại học Công nghệ TP.HCM</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-actions">
+            <a href="{{ "/about/" | relURL }}" class="btn btn-primary">
+                <span class="btn-icon">👨‍💻</span>
+                Tìm hiểu thêm về tôi
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}
+

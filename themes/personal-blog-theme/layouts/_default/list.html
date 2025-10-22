@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="container-wide">
+    <div class="page-header">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <p class="page-description">{{ .Content }}</p>
+    </div>
+    
+    <div class="posts-grid">
+        {{ range .Pages }}
+        <article class="post-card">
+            <div class="post-card-header">
+                <div class="post-card-category">
+                    {{ if .Params.tags }}
+                        {{ range first 1 .Params.tags }}
+                        <span class="category-tag">{{ . }}</span>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+            <div class="post-card-content">
+                <h3 class="post-card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h3>
+                <p class="post-card-excerpt">{{ .Summary | truncate 120 }}</p>
+                <div class="post-card-footer">
+                    <div class="post-card-tags">
+                        {{ if .Params.tags }}
+                            {{ range .Params.tags }}
+                            <span class="tag">{{ . }}</span>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    <div class="post-card-meta">
+                        <span class="reading-time">{{ .ReadingTime }} phút đọc</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
