@@ -1,4 +1,5 @@
 name: Deploy Hugo site to Pages
+# Force rebuild: 2025-10-29 17:35
 
 on:
   push:
