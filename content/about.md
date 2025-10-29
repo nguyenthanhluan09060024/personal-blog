@@ -39,6 +39,39 @@ draft: false
     </div>
 </div>
 
+## Chứng Chỉ 🏆
+
+<div class="certificates-section">
+    <h3>Chứng chỉ đã đạt được:</h3>
+    <div class="certificate-item">
+        <a href="../certificates/javascript-essentials.jpg" target="_blank" class="certificate-link">
+            <span class="certificate-icon">📜</span>
+            <div class="certificate-info">
+                <strong>JavaScript Essentials 1</strong><br>
+                <small>Cisco Networking Academy & JS Institute - Hoàn thành: 25/09/2025</small>
+            </div>
+        </a>
+    </div>
+    <div class="certificate-item">
+        <a href="../certificates/networking-basics.jpg" target="_blank" class="certificate-link">
+            <span class="certificate-icon">📜</span>
+            <div class="certificate-info">
+                <strong>Networking Basics</strong><br>
+                <small>Cisco Networking Academy - Hoàn thành: 12/09/2025</small>
+            </div>
+        </a>
+    </div>
+    <div class="certificate-item">
+        <a href="../certificates/javascript-essentials-2.jpg" target="_blank" class="certificate-link">
+            <span class="certificate-icon">📜</span>
+            <div class="certificate-info">
+                <strong>JavaScript Essentials 2</strong><br>
+                <small>Cisco Networking Academy & JS Institute - Hoàn thành: 16/10/2025</small>
+            </div>
+        </a>
+    </div>
+</div>
+
 ## Kỹ Năng Lập Trình 🛠️
 
 <div class="skills-grid">

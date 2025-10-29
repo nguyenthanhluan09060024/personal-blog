@@ -21,3 +21,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Local certificates (chỉ dùng cho local development)
+static/certificates/

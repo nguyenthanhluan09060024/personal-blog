@@ -1308,3 +1308,62 @@ p {
         padding: 2rem;
     }
 }
+
+/* Certificates Section - CHỈ DÙNG CHO LOCAL */
+.certificates-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+}
+
+.certificates-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.certificate-item {
+    margin-bottom: 1rem;
+}
+
+.certificate-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.certificate-link:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-light);
+}
+
+.certificate-icon {
+    font-size: 2.5rem;
+}
+
+.certificate-info {
+    flex: 1;
+}
+
+.certificate-info strong {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.certificate-info small {
+    color: var(--text-light);
+    font-size: 1rem;
+}
